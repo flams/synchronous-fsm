@@ -1,4 +1,4 @@
-synchronous-fsm
+Synchronous finite state machine
 =============
 
 A synchronous FSM that also triggers events when entering or leaving a state.
@@ -19,7 +19,7 @@ Require synchronous-fsm:
 var FSM = require("synchronous-fsm");
 ```
 
-To initialize the synchronous we need to define states and transitions first:
+To initialize the statemachine we need to define states and transitions first:
 
 ```js
 var states = {
