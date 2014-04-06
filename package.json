@@ -1,7 +1,7 @@
 {
   "name": "synchronous-fsm",
   "description": "A synchronous FSM that triggers events when entering or leaving a state",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/flams/synchronous-fsm",
   "licenses": [
     {
@@ -15,12 +15,14 @@
   ],
   "author": "Olivier Scherrer <pode.fr@gmail.com>",
   "keywords": [
-    "publish",
-    "subscribe",
-    "watch",
-    "notify",
-    "observable",
-    "observer"
+    "state",
+    "states",
+    "statemachine",
+    "machine",
+    "fsm",
+    "finite",
+    "transtion",
+    "transitions"
   ],
   "repository": {
     "type": "git",
