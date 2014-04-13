@@ -7,7 +7,8 @@
 */
 "use strict";
 
-var toArray = require("to-array");
+var toArray = require("to-array"),
+    simpleLoop = require("simple-loop");
 
 /**
  * @class
@@ -144,12 +145,14 @@ module.exports = function StateMachineConstructor($initState, $diagram) {
     /**
      * Initializes the StateMachine with the given diagram
      */
-    loop($diagram, function (transition, state) {
-        var myState = this.add(state);
-        transition.forEach(function (params){
-            myState.add.apply(null, params);
-        });
-    }, this);
+    if ($diagram) {
+        simpleLoop($diagram, function (transition, state) {
+            var myState = this.add(state);
+            transition.forEach(function (params){
+                myState.add.apply(null, params);
+            });
+        }, this);
+    }
 
     /**
      * Sets its initial state

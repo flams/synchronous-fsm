@@ -35,7 +35,7 @@ describe("StateMachineState", function () {
 
     it("should return a transition object when adding a state", function () {
         var state = stateMachine.add("state");
-        expect(state).toBeInstanceOf(Object);
+        expect(typeof state).toBe("object");
     });
 
     it("should return a transition object on get", function () {
@@ -65,7 +65,7 @@ describe("StateMachineState", function () {
 
     it("should tell if it has a given state", function () {
         stateMachine.add("state");
-        expect(stateMachine.has).toBe("function");
+        expect(typeof stateMachine.has).toBe("function");
         expect(stateMachine.has("")).toBe(false);
         expect(stateMachine.has("state")).toBe(true);
     });
@@ -403,7 +403,7 @@ describe("StateMachineAdvance", function () {
     });
 
     it("should have a function for advancing the state machine to a given state", function () {
-        expect(stateMachine.advance).toBe("function");
+        expect(typeof stateMachine.advance).toBe("function");
 
         expect(stateMachine.advance("")).toBe(false);
         expect(stateMachine.advance("state1")).toBe(true);

@@ -39,6 +39,7 @@
     "jasmine-node": "~1.14.3"
   },
   "dependencies": {
-    "to-array": "~0.1.4"
+    "to-array": "~0.1.4",
+    "simple-loop": "0.0.2"
   }
 }
